@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>ToDo App</h1>
+    </div>
+    <div class="content">
+        <div class="tasks-container">
+            <h1>Tasks</h1>
+            <div class="tasks"></div>
+        </div>
+        <div class="done-container">
+            <h1>Done</h1>
+            <div class="done"></div>
+        </div>
+    </div>
+
+    <form action="#" class="hide">
+        <label for="name">Name</label>
+        <input type="text" class="name" id="name"><br>
+        <span>Done:</span>
+        <input type="radio" id="status" name="status" value="true">
+        <label for="true">True</label>
+        <input type="radio" id="status" name="status" value="false" checked>
+        <label for="false">False</label><br>
+
+        <button class="addTask">add</button>
+    </form>
+
+    <button class="displayForm">Add Task</button>
+
+</body>
+
+</html>
