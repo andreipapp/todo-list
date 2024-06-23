@@ -13,29 +13,40 @@
     </div>
     <div class="content">
         <div class="tasks-container">
-            <h1>Tasks</h1>
+            <div class="content-header">
+                <h1>Tasks</h1>
+            </div>
             <div class="tasks"></div>
         </div>
         <div class="done-container">
-            <h1>Done</h1>
-            <div class="done"></div>
+            <div class="content-header">
+                <h1>Done</h1>
+            </div>
+
         </div>
     </div>
 
-    <form action="#" class="hide">
-        <label for="name">Name</label>
-        <input type="text" class="name" id="name"><br>
-        <span>Done:</span>
-        <input type="radio" id="status" name="status" value="true">
-        <label for="true">True</label>
-        <input type="radio" id="status" name="status" value="false" checked>
-        <label for="false">False</label><br>
+    <div class="form">
+        <form action="#" class="hide">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" class="name" id="name"><br>
+            </div>
+            <div>
+                <span>Done:</span>
+                <input type="radio" id="status" name="status" value="true">
+                <label for="true">True</label>
+                <input type="radio" id="status" name="status" value="false" checked>
+                <label for="false">False</label><br>
+            </div>
 
-        <button class="addTask">add</button>
-    </form>
+            <div>
+                <button class="addTask">Add Task</button>
+            </div>
+        </form>
+        <button class="displayForm">Add Task</button>
 
-    <button class="displayForm">Add Task</button>
-
+    </div>
 </body>
 
 </html>

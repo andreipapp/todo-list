@@ -1,3 +1,111 @@
+html{
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    box-sizing: border-box;
+}
+body{
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.content{
+    width:820px;
+    height:500px;
+    max-width: 1000px;
+    max-height: 800px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:20px;
+}
+.tasks-container,.done-container{
+    height:400px;
+    width:400px;
+    background-color: white;
+    border-radius: 10px;
+}
+
 .hide{
     display: none;
+}
+.header{
+    text-align: center;
+    margin-bottom: 50px;  
+}
+.content-header{
+    background-color: rgb(235, 174, 43);
+}
+h1{
+    margin:0;
+    padding:5px;
+    padding-left: 20px;
+
+}
+.header > h1{
+    color:white;
+    font-size:40px;
+}
+.task{
+display: grid;
+grid-template-columns: 3fr 1fr 1fr;
+padding: 8px;
+font-size: 20px;
+border: 2px solid gray;
+margin:5px;
+border-radius: 20px;
+}
+
+button{
+    background:none;
+    border:none;
+
+}
+svg{
+    width:20px;
+    height: 20px;
+    
+}
+
+form{
+    width:300px;
+    height:150px;
+    background-color: blue;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: absolute;
+    top:40%;
+    left:40%;
+    z-index: 1000;
+    background: rgba(40, 38, 40, 0.5);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.6px);
+    -webkit-backdrop-filter: blur(2.6px);
+    border: 1px solid rgba(154, 140, 152, 0.27);
+   color:aliceblue
+    
+}
+form .addTask{
+border:2px solid rgba(255, 255, 255, 0.7) !important;
+font-size: 15px;
+border-radius: 20px;
+color: whitesmoke;
+}
+.name{
+    border-radius: 20px;
+    padding:2px;
+    border:none;
+}
+.displayForm{
+    border: 2px solid white;
+    padding:6px;
+    border-radius: 20px;
+    font-size: 17px;
+    color: white;
 }

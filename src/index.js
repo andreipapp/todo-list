@@ -7,24 +7,20 @@ const doneContainer = document.querySelector('.done');
 const displayForm = document.querySelector('.displayForm');
 const addTask = document.querySelector('.addTask');
 const form = document.querySelector('form');
-const tasks = document.querySelectorAll('.task');
 const list = [];
 
 displayForm.addEventListener('click', () => form.classList.toggle('hide'));
 addTask.addEventListener('click', (e) => {
+    e.preventDefault();
     const name = document.getElementById('name').value;
     const status = document.getElementById('status').checked;
     if (!name) {
         alert('Please enter todo!');
-        e.preventDefault();
-
+        return;
     }
     const task = new Todo(name, status);
     list.push(task);
     loadTasks(list);
-
-
-
     form.classList.toggle('hide');
     document.getElementById('name').value = '';
 })
@@ -39,7 +35,7 @@ function loadTasks(list) {
         const statusButton = document.createElement('button');
         const deleteButton = document.createElement('button');
         statusButton.classList.add('toggle');
-        statusButton.textContent = 'toggle';
+        statusButton.innerHtml = 'toggle';
         deleteButton.classList.add('delete');
         deleteButton.textContent = 'delete';
         taskBody.textContent = task.title;
